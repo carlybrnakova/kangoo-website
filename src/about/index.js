@@ -4,17 +4,18 @@ import styled from "styled-components";
 
 const Title = styled.h1`
   height: 150px;
-  color: #eff4f5;
+  color: #eff4f5;;
   background-color: #395660;
+  
 `;
 
 const UnderConstruction = styled.div`
   height: 50px;
 `;
 
-let Schedule = () => (
+let About = () => (
   <div>
-    <Title>Schedule</Title>
+    <Title>About</Title>
     <UnderConstruction>Under Construction</UnderConstruction>
     <nav>
       <ButtonLink navTo="/">Go back</ButtonLink>
@@ -22,4 +23,4 @@ let Schedule = () => (
   </div>
 );
 
-export default Schedule;
+export default About;
