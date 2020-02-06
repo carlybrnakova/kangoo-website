@@ -52,6 +52,7 @@ const Page = props => (
       </NavSection>
     </HeaderContainer>
     <nav>{/* <LinkButton navTo="schedule">Go to schedule</LinkButton> */}</nav>
+    {props.children}
   </Root>
 );
 

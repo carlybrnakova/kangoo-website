@@ -18,7 +18,7 @@ const Title = styled.h1`
 // <HeaderLink navTo="/schedule">Schedule</HeaderLink>
 
 const title = <Title>Kangoo SLC</Title>;
-let Home = props => <Page title={title} />;
+let Home = props => <Page title={title}>Welcome!</Page>;
 
 function App() {
   return (
