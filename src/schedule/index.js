@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonLink from "../link-button";
 import styled from "styled-components";
+import Page from "../page";
 
 const Title = styled.h1`
   height: 150px;
@@ -13,13 +14,12 @@ const UnderConstruction = styled.div`
 `;
 
 let Schedule = () => (
-  <div>
-    <Title>Schedule</Title>
+  <Page title={<Title>Schedule</Title>} showMenu={false}>
     <UnderConstruction>Under Construction</UnderConstruction>
     <nav>
       <ButtonLink navTo="/">Go back</ButtonLink>
     </nav>
-  </div>
+  </Page>
 );
 
 export default Schedule;

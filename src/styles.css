@@ -1,9 +1,3 @@
-.App {
-  font-family: "Krub", sans-serif;
-  text-align: center;
-}
-
-html,
 body {
   margin: 0 0 0 0;
   padding: 0;
@@ -11,7 +5,7 @@ body {
   width: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+.App {
+  font-family: "Krub", sans-serif;
+  text-align: center;
 }

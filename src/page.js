@@ -3,6 +3,7 @@ import propTypes from "prop-types";
 import { Link } from "@reach/router";
 import styled from "styled-components";
 import HeaderLink from "./header-link";
+import MenuHeaderRow from "./menu-header-row";
 
 const Root = styled.div`
   display: flex;
@@ -25,16 +26,13 @@ const HeaderContainer = styled.div`
   padding: 8px;
 
   h1 {
+    margin-block-start: 0;
     color: #eff4f5;
     font-size: 48px;
   }
 `;
 
-const NavSection = styled.nav`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-`;
+const NavSection = styled.nav``;
 
 const FooterContainer = styled.div`
   background-color: #395660;
@@ -42,14 +40,16 @@ const FooterContainer = styled.div`
   flex-shrink: 0;
 `;
 
-const Page = props => (
+const Page = (props) => (
   <Root>
     <HeaderContainer>
       {props.title}
-      <NavSection>
-        <HeaderLink navTo="/about">About us</HeaderLink>
-        <HeaderLink navTo="/schedule">Schedule</HeaderLink>
-      </NavSection>
+      {props.showMenu && (
+        <MenuHeaderRow>
+          <HeaderLink navTo="/about">About us</HeaderLink>
+          <HeaderLink navTo="/schedule">Schedule</HeaderLink>
+        </MenuHeaderRow>
+      )}
     </HeaderContainer>
     <nav>{/* <LinkButton navTo="schedule">Go to schedule</LinkButton> */}</nav>
     {props.children}
@@ -58,7 +58,9 @@ const Page = props => (
 
 Page.propTypes = {
   navTo: propTypes.string,
-  title: propTypes.node
+  title: propTypes.node,
+  showMenu: propTypes.bool
 };
 
 export default Page;
+export { HeaderContainer };

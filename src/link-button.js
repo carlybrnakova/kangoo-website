@@ -3,12 +3,10 @@ import propTypes from "prop-types";
 import { Link } from "@reach/router";
 import "./button.css";
 
-const LinkButton = props => (
-  <div className="button">
-    <Link className="linky" to={props.navTo}>
-      {props.children}
-    </Link>
-  </div>
+const LinkButton = (props) => (
+  <Link className="linky button" to={props.navTo}>
+    {props.children}
+  </Link>
 );
 
 LinkButton.propTypes = {

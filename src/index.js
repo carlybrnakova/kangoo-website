@@ -3,8 +3,6 @@ import ReactDOM from "react-dom";
 import { Router } from "@reach/router";
 import About from "./about/index.js";
 import Schedule from "./schedule/index.js";
-import LinkButton from "./link-button";
-import HeaderLink from "./header-link";
 import Page from "./page";
 import styled from "styled-components";
 
@@ -18,7 +16,11 @@ const Title = styled.h1`
 // <HeaderLink navTo="/schedule">Schedule</HeaderLink>
 
 const title = <Title>Kangoo SLC</Title>;
-let Home = props => <Page title={title}>Welcome!</Page>;
+let Home = (props) => (
+  <Page title={title} showMenu={true}>
+    Welcome!
+  </Page>
+);
 
 function App() {
   return (

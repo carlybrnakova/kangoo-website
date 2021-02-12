@@ -1,12 +1,12 @@
 import React from "react";
 import ButtonLink from "../link-button";
 import styled from "styled-components";
+import Page from "../page";
 
 const Title = styled.h1`
   height: 150px;
-  color: #eff4f5;;
+  color: #eff4f5;
   background-color: #395660;
-  
 `;
 
 const UnderConstruction = styled.div`
@@ -14,13 +14,12 @@ const UnderConstruction = styled.div`
 `;
 
 let About = () => (
-  <div>
-    <Title>About</Title>
+  <Page title={<Title>About</Title>} showMenu={false}>
     <UnderConstruction>Under Construction</UnderConstruction>
     <nav>
       <ButtonLink navTo="/">Go back</ButtonLink>
     </nav>
-  </div>
+  </Page>
 );
 
 export default About;
